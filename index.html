@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splitter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fb2e95a228.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section>
+      <h1>SPLI<span>TTER</span></h1>
+      <div class="container">
+        <div class="big-part">
+          <div class="small-part">
+            <p class="small-title">Bill</p>
+            <div class="input-icon">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <input
+                type="number"
+                id="input-bill"
+                class="input-number"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="small-part">
+            <p class="small-title">Select Tip %</p>
+            <div class="div-tip-selection">
+              <button value="5">5%</button>
+              <button value="10">10%</button>
+              <button value="15">15%</button>
+              <button value="25">25%</button>
+              <button value="50">50%</button>
+              <input type="number" id="input-tip" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="small-part">
+            <div class="title-with-err">
+              <p class="small-title">Number of People</p>
+              <p class="err-message">Can't be zero</p>
+            </div>
+          
+            <div class="input-icon">
+              <i class="fa-solid fa-user"></i>
+              <input
+                type="number"
+                id="input-people"
+                class="input-number"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="big-part">
+          <div class="small-part">
+            <p>Tip Amount<span>/ person</span></p>
+            <p id="tip-amount">$0.00</p>
+          </div>
+          <div class="small-part">
+            <p>Total<span>/ person</span></p>
+            <p id="total-amount">$0.00</p>
+          </div>
+
+          <button id="btn-reset" disabled>RESET</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

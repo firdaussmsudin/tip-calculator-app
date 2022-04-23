@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --dark-cyan: hsl(183, 100%, 15%);
+  --darkgray-cyan: hsl(186, 14%, 43%);
+  --gray-cyan: hsl(184, 14%, 56%);
+  --lightgray-cyan: hsl(185, 41%, 84%);
+  --light-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html, input, button{
+    font-family: 'Space Mono', monospace;
+}
+
+input{
+  border: 2px solid var(--light-cyan);
+  border-radius: 3px;
+  direction: rtl;
+  background-color: var(--light-cyan);
+  color: var(--dark-cyan);
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+input::placeholder{
+  color: var(--gray-cyan);
+}
+
+input:hover{
+  border: 2px solid var(--strong-cyan);
+}
+
+input:focus{
+  outline: none;
+  border: 2px solid var(--strong-cyan);
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--lightgray-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: var(--darkgray-cyan);
+    letter-spacing: 0.5rem;
+    font-size: 1.3rem;
+}
+
+h1 span{
+    display: block;
+}
+
+.container{
+  width: 780px;
+  /* width: 60%; */
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.big-part{
+  width: 48%;
+}
+
+.small-part{
+  margin: 30px 0;
+}
+
+.small-title{
+  margin-bottom: 10px;
+}
+
+.input-number{
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::placeholder{
+  text-align: right;
+}
+
+.input-icon{
+  position: relative;
+}
+
+.input-icon i{
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  pointer-events: none;
+  font-style: normal;
+  color: var(--gray-cyan);
+}
+
+.div-tip-selection{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 31%);
+  grid-template-rows: repeat(2, 45%);
+  grid-gap: 10px;
+}
+
+.div-tip-selection button{
+  border: none;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.small-title{
+  color: var(--darkgray-cyan);
+}
+
+.div-tip-selection button:hover{
+background-color: var(--lightgray-cyan);
+color: var(--dark-cyan);
+cursor: pointer;
+}
+
+#input-tip::placeholder{
+text-align: center;
+}
+
+.big-part:nth-child(2){
+  background-color: var(--dark-cyan);
+  border-radius: 20px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.big-part:nth-child(2) .small-part{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.big-part:nth-child(2) .small-part p{
+  color: var(--white);
+}
+
+.big-part:nth-child(2) .small-part p span{
+  color: var(--gray-cyan);
+  display: block;
+  font-size: 0.8rem;
+}
+
+#tip-amount, #total-amount{
+  color: var(--strong-cyan);
+  font-size: 2.5rem;
+}
+
+#btn-reset{
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius:5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#btn-reset:disabled{
+background-color: hsl(183, 80%, 24%);
+}
+
+.btn-active{
+  background-color: var(--strong-cyan) !important;
+  color: var(--dark-cyan) !important;
+}
+
+.title-with-err{
+  display: flex;
+  justify-content: space-between;
+}
+
+.err-message{
+  color: hsl(10, 59%, 62%);
+  visibility: hidden;
+}
+
+
+
+@media  screen and (max-width:760px) {
+  section{
+    height: 100%;
+    width: 100%;
+  }
+
+  h1{
+    margin-top: 40px;
+  }
+
+  .container{
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .input-number{
+    width: 100%;
+  }
+
+  .big-part{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .container{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .div-tip-selection{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 30%);
+    grid-gap: 10px;
+  }
+
+}
