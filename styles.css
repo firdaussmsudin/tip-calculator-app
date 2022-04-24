@@ -37,6 +37,10 @@ input:hover{
   border: 2px solid var(--strong-cyan);
 }
 
+.input-error{
+  border: 2px solid red;
+}
+
 input:focus{
   outline: none;
   border: 2px solid var(--strong-cyan);

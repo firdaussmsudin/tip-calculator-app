@@ -56,8 +56,11 @@ function calculateAmount() {
     console.log("people cant be zero");
     document.getElementsByClassName("err-message")[0].style.visibility =
       "visible";
+    document.getElementById('input-people').classList.add('input-error')
     return;
   }
+
+  document.getElementById('input-people').classList.remove('input-error');
 
   document.getElementsByClassName("err-message")[0].style.visibility = "hidden";
 
