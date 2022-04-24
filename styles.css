@@ -26,6 +26,7 @@ input{
   color: var(--dark-cyan);
   padding: 5px;
   font-size: 1.2rem;
+  caret-color: transparent;
 }
 
 input::placeholder{
@@ -89,6 +90,7 @@ h1 span{
   height: 40px;
   padding: 10px;
 }
+
 
 
 
